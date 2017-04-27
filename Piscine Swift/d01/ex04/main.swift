@@ -1,0 +1,20 @@
+var newDeck: Deck = Deck(toMix: true)
+print("Mixed deck at beginning:")
+print(newDeck)
+print(newDeck.outs)
+print(newDeck.discards)
+print("\n")
+
+print("First draw")
+newDeck.draw()
+print(newDeck)
+print(newDeck.outs)
+print(newDeck.discards)
+print("\n")
+
+let card1: Card = newDeck.outs.first!
+print("Fold ", card1)
+newDeck.fold(current: card1)
+print(newDeck)
+print(newDeck.outs)
+print(newDeck.discards)
